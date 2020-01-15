@@ -1,1 +1,24 @@
-＜サイドバー＞
+.saide_bar
+  .saide_bar_list
+    .saide_bar_list_top_items
+      %p.saide_bar_list_top_items_name
+        hachino
+      .saide_bar_list_top_items_icon
+        %p.saide_bar_list_top_items_icon_user
+          =link_to "#" do
+            = icon('fas', 'edit')
+          =link_to "#" do
+            = icon('fas', 'cog')
+      -# %ul.saide_bar_list_top_items_menu
+      -#   %il.saide_bar_list_top_items_groupe
+      -#   = %link_to "#" do
+      -#   = icon ('fas', 'edit')
+      -#   %il.saide_bar_list_top_items_edi
+      -#   = %link_to "#" do
+      -#   = icon ('fas', 'cog')
+
+  .saide_bar_groupe
+    %p.saide_bar_groupe_name
+      techcamp
+    %p.saide_bar_groupe_list
+      まだメッセージがありません

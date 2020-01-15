@@ -1,0 +1,51 @@
+.saide_bar{
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  height: 100vh;
+  background-color: #253141;
+  .saide_bar_list{
+  background-color: #253141;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  height: 100px;
+  }
+  .saide_bar_list_top_items{
+    height: 20px;
+    width: 240px;
+    background-color: #333333;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .saide_bar_list_top_items_name{
+    float: left;
+    color: white;
+  }
+  .saide_bar_list_top_items_icon{
+    display: flex;
+    float: right;
+  }
+  .saide_bar_list_top_items_icon_user{
+    float: right;
+    a{
+    color: #ffff;
+  }
+  }
+  .saide_bar_groupe{
+  padding: 20px 20px 0;
+  width: 300px;
+  height: 100vh;
+  background-color: #2f3e51;
+  }
+  .saide_bar_groupe_name{
+  font-size: 15px;
+  margin-bottom: 5px;
+  color: #fff;
+  }
+  .saide_bar_groupe_list{
+  font-size: 11px;
+  color: white;
+  }
+}  

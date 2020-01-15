@@ -1,0 +1,22 @@
+.main_chat{
+  height: 100vh;
+  width: calc(100vw - 300px);
+  float: right;
+  .main_chat_header{
+  height: 100px;
+  width: calc(100vw - 300px);
+  background-color: #ffffff;
+  padding: 0 40px;
+  }
+  .main_chat_list{
+  height: calc(100vh - 190px);
+  width: calc(100vw - 300px);
+  background-color: #fafafa;
+  }
+  .main_chat_from{
+    width: calc(100vw - 300px);
+    height: 90px;
+    background-color: #d2d2d2;
+  }
+  
+}
