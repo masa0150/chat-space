@@ -35,6 +35,7 @@ Things you may want to cover:
 
 ## usersテーブル
 |Column|Type|Options|
+|------|----|-------|
 |name|string|null: false, add_index: true|
 |email|string|null: false, unique: true|
 ### Association
@@ -44,6 +45,7 @@ Things you may want to cover:
 
 ## groupsテーブル
 |Column|Type|Options|
+|------|----|-------|
 |group_name|string|null: false, unique: true|
 ### Association
 - has_many :groups_users
@@ -52,6 +54,7 @@ Things you may want to cover:
 
 ## groups_usersテーブル
 |Column|Type|Options|
+|------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 ### Association
