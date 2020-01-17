@@ -96,42 +96,38 @@
 
     }
   }
-<<<<<<< Updated upstream
-
-=======
-  .main_chat_from_new_message{
-    display: flex;
-    background-color: white;
-    width: 80%;
-  }
-  .main_chat_from_new_message_input-box{
-    position: relative;
-    width: 100%;
-  }
-    .main_chat_from_new_message_input-box{
-      height: 50px;
-      width: 100%;
-      padding: 0 40px 0 10px;
-      color: #434a54;
-      border-style: none;
-  }
-  .main_chat_from_send{
-    font-size: 16px;
-    border: 20px;
-    padding: 15px ;
-    display: flex;
-    background-color: #38aef0;
-    color: white;
-  }
-  .main_chat_from_new_message_icon.img{
-    float: right;
-    padding: 17px;
-    font-size: 1.3rem;
-    margin: 0 0 0 365px;
-    a{
-    color: black;
-    list-style: none;
+    &__new_message{
+      display: flex;
+      background-color: white;
+      width: 80%;
+      }
+      &__input-box{
+        position: relative;
+        width: 100%;
+       }
+      &__input-box{
+        height: 50px;
+        width: 100%;
+        padding: 0 40px 0 10px;
+        color: #434a54;
+        border-style: none;
+      }
+    &__send{
+      font-size: 16px;
+      border: 20px;
+      padding: 15px ;
+      display: flex;
+      background-color: #38aef0;
+      color: white;
+     }
+    &__icon.img{
+      float: right;
+      padding: 17px;
+      font-size: 1.3rem;
+      margin: 0 0 0 365px;
+      a{
+      color: black;
+      list-style: none;
   }
   }
-  
->>>>>>> Stashed changes
+  }
