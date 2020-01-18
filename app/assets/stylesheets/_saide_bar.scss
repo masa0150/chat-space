@@ -1,22 +1,19 @@
 .saide_bar{
-  margin: 0;
-  padding: 0;
   width: 300px;
-  height: 100vh;
-  background-color: #253141;
+    color: white;
+    float: left;
   .saide_bar_list{
-  background-color: #253141;
-  padding: 0 40px;
-  display: flex;
-  align-items: center;
-  height: 100px;
+    background-color: #253141;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
   }
   .saide_bar_list_top_items{
-    height: 20px;
-    width: 240px;
-    background-color: #333333;
-    justify-content: center;
-    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: bold;
   }
   
   .saide_bar_list_top_items_name{
@@ -31,6 +28,7 @@
     float: right;
     a{
     color: #ffff;
+    list-style: none;
   }
   }
   .saide_bar_groupe{
@@ -45,7 +43,7 @@
   color: #fff;
   }
   .saide_bar_groupe_list{
-  font-size: 11px;
+  font-size: 12px;
   color: white;
   }
 }  

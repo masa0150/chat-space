@@ -1,4 +1,28 @@
-.main_chat
-  .main_chat_header
-  .main_chat_list
-  .main_chat_from
+.main-chat
+  .main-chat__header
+    .main-chat__header__left-box
+      %h2.main-chat__header__left-box__current-group
+        techcamp
+      %ul.main-chat__header__left-box__member-list
+        Member : 
+        %li.main-chat__header__left-box__member-list__member
+          ハチノ
+        %li.main-chat__header__left-box__member-list__member
+          hachino
+    .main-chat__header__edit
+      Edit
+  .main-chat__list
+    .main-chat__list__text
+      hachino
+      .main-chat__list__text__text2
+        2020/01/16 10:55
+    .tmain-chat__list__ext3
+      text
+  
+  %from{class: "main-chat__form"}
+    %input{type: "text", placeholder: "type a message", class: "main-chat__form__text"}
+      %label{class: "main-chat__form__text__image", for: "image"}
+        = icon('fa','image')
+        %input{class: "main-chat__form__text__image__hidden", type: 'file', id: "image"}
+    .main-chat__form__send
+      Send
