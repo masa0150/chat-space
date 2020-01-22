@@ -2,27 +2,29 @@
   .main-chat__header
     .main-chat__header__left-box
       %h2.main-chat__header__left-box__current-group
-        techcamp
+        = @group.name
       %ul.main-chat__header__left-box__member-list
         Member : 
         %li.main-chat__header__left-box__member-list__member
-          ハチノ
+        - @group.users.each do |user|
+          %span.chat-header__user #{user.name}
         %li.main-chat__header__left-box__member-list__member
-          hachino
+          
     .main-chat__header__edit
-      Edit
+      %h2.main-chat__header__left-box__current-group
+        = link_to "Edit", edit_group_path(@group) , class: "main-chat__header__left-box"
   .main-chat__list
     .main-chat__list__text
-      hachino
+      = render @messages
       .main-chat__list__text__text2
-        2020/01/16 10:55
+        
     .tmain-chat__list__ext3
-      text
-  
-  %from{class: "main-chat__form"}
-    %input{type: "text", placeholder: "type a message", class: "main-chat__form__text"}
-      %label{class: "main-chat__form__text__image", for: "image"}
-        = icon('fa','image')
-        %input{class: "main-chat__form__text__image__hidden", type: 'file', id: "image"}
-    .main-chat__form__send
-      Send
+      
+  .main_chat__form
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      .main_chat__from__new_message__input-box__image
+        = f.label :image, class: 'form__mask__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'

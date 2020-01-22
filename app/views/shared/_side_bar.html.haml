@@ -3,15 +3,18 @@
     .side_bar_list_top_items
       = current_user.name
       %p.side_bar_list_top_items_name
-        hachino
+        
       .side_bar_list_top_items_icon
         %p.side_bar_list_top_items_icon_user
           =link_to new_group_path do
             = icon('fas', 'edit')
           = link_to edit_user_path(current_user) do
             = icon('fas', 'cog', class: 'icon')
-  .side_bar_groupe
-    %p.side_bar_groupe_name
-      techcamp
-    %p.side_bar_groupe_list
-      まだメッセージがありません
+  .side_bar_groups
+    - current_user.groups.each do |group|
+      .side_bar_groups_group
+        = link_to group_messages_path(group) do
+          .group__name
+            = group.name
+          .group__message
+            = group.show_last_message

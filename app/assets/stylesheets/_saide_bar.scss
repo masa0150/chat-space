@@ -31,19 +31,24 @@
     list-style: none;
   }
   }
-  .side_bar_groupe{
+  .side_bar_groups{
   padding: 20px 20px 0;
   width: 300px;
   height: 100vh;
   background-color: #2f3e51;
   }
-  .side_bar_groupe_name{
+  .side_bar_groups_group{
   font-size: 15px;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
   color: #fff;
   }
-  .side_bar_groupe_list{
-  font-size: 12px;
-  color: white;
+  .group__name{
+    font-size: 15px;
+    margin-bottom: 5px;
+    color: #fff;
   }
+  .group__message{
+    font-size: 12px;
+    color: white;
+    }
 }  
