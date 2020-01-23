@@ -59,12 +59,13 @@
     width: inherit;
     display: flex;
     .form__message{
-      width: 47vw;
+      width: 51vw;
       height: 55px;
     }
     .new_message{
       height: 60px;
       display: flex;
+      position: relative;
       &__input-box{
         display: flex;
         background-color: white;
@@ -73,14 +74,17 @@
         } 
         .main_chat__from__new_message__input-box__image{
           height: 60px;
-          margin: 0px 10px 0 0px;
+          margin: 0px 0 0 411px;
           display: flex;
+          position: absolute;
+          height: 60px;
           &__image{
           float: right;
           font-size: 1.3rem;
          }
          .form__mask__image{
            margin: 0;
+           padding: 10px 0 0 49px;
          }
         .hidden{
           color: black;
@@ -98,7 +102,7 @@
       width: 100px;
       height: 50px;
       padding: 0 30px;
-      margin-left: 15px;
+      margin-left: 54px;
       background-color: #38aef0;
       color: white;
       cursor: pointer;
