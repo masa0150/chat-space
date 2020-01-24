@@ -1,16 +1,17 @@
-.saide_bar
-  .saide_bar_list
-    .saide_bar_list_top_items
-      %p.saide_bar_list_top_items_name
+.side_bar
+  .side_bar_list
+    .side_bar_list_top_items
+      = current_user.name
+      %p.side_bar_list_top_items_name
         hachino
-      .saide_bar_list_top_items_icon
-        %p.saide_bar_list_top_items_icon_user
-          =link_to "#" do
+      .side_bar_list_top_items_icon
+        %p.side_bar_list_top_items_icon_user
+          = link_to new_group_path do
             = icon('fas', 'edit')
-          =link_to "#" do
-            = icon('fas', 'cog')
-  .saide_bar_groupe
-    %p.saide_bar_groupe_name
+          = link_to edit_user_path(current_user) do
+            = icon('fas', 'cog', class: 'icon')
+  .side_bar_groupe
+    %p.side_bar_groupe_name
       techcamp
-    %p.saide_bar_groupe_list
+    %p.side_bar_groupe_list
       まだメッセージがありません
