@@ -3,54 +3,54 @@ $(function () {
   var buildHTML = function(message) {
     if (message.content && message.image) {
       //data-idが反映されるようにしている
-      var html = `<div class="message" data-message-id=` + message.id + `>` +
-        `<div class="upper-message">` +
-          `<div class="upper-message__user-name">` +
-            message.user_name +
-          `</div>` +
-          `<div class="upper-message__date">` +
-            message.created_at +
-          `</div>` +
-        `</div>` +
-        `<div class="lower-message">` +
-          `<p class="lower-message__content">` +
-            message.content +
-          `</p>` +
-          `<img src="` + message.image + `" class="lower-message__image" >` +
-        `</div>` +
-      `</div>`
+      var html = `<div class="message" data-message-id= "${message.id}"> 
+        <div class="upper-message">
+          <div class="upper-message__user-name">
+            ${message.user_name}
+          </div>
+          <div class="upper-message__date">
+            ${message.created_at}
+          </div>
+        </div>
+        <div class="lower-message">
+          <p class="lower-message__content">
+            ${message.content}
+          </p>
+          <img src="${message.image}" class="lower-message__image" >
+        </div>
+      </div>`
     } else if (message.content) {
       //同様に、data-idが反映されるようにしている
-      var html = `<div class="message" data-message-id=` + message.id + `>` +
-        `<div class="upper-message">` +
-          `<div class="upper-message__user-name">` +
-            message.user_name +
-          `</div>` +
-          `<div class="upper-message__date">` +
-            message.created_at +
-          `</div>` +
-        `</div>` +
-        `<div class="lower-message">` +
-          `<p class="lower-message__content">` +
-            message.content +
-          `</p>` +
-        `</div>` +
-      `</div>`
+      var html = `<div class="message" data-message-id="${message.id}"> 
+        <div class="upper-message">
+          <div class="upper-message__user-name">
+            ${message.user_name}
+          </div>
+          <div class="upper-message__date">
+            ${message.created_at}
+          </div>
+        </div>
+        <div class="lower-message">
+          <p class="lower-message__content">
+            ${message.content}
+          </p> 
+        </div>
+      </div>`
     } else if (message.image) {
       //同様に、data-idが反映されるようにしている
-      var html = `<div class="message" data-message-id=` + message.id + `>` +
-        `<div class="upper-message">` +
-          `<div class="upper-message__user-name">` +
-            message.user_name +
-          `</div>` +
-          `<div class="upper-message__date">` +
-            message.created_at +
-          `</div>` +
-        `</div>` +
-        `<div class="lower-message">` +
-          `<img src="` + message.image + `" class="lower-message__image" >` +
-        `</div>` +
-      `</div>`
+      var html = `<div class="message" data-message-id="${message.id}"> 
+        <div class="upper-message">
+          <div class="upper-message__user-name">
+            ${message.user_name}
+          </div>
+          <div class="upper-message__date">
+            ${message.created_at}
+          </div>
+        </div>
+        <div class="lower-message">
+          <img src="${message.image}" class="lower-message__image" >
+        </div>
+      </div>`
     };
     return html;
   };
@@ -81,7 +81,7 @@ $.ajax({
 var reloadMessages = function() {
   //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
   last_message_id = $('.message:last').data("message-id");
-  
+  console.log(last_message_id)
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
     
   $.ajax({
@@ -94,7 +94,7 @@ var reloadMessages = function() {
     data: {id: last_message_id}
   })
   .done(function(messages) {
-    
+    console.log(messages)
     if (messages.length !== 0) {
     //追加するHTMLの入れ物を作る
     var insertHTML = '';
@@ -110,7 +110,7 @@ var reloadMessages = function() {
   }
   })
   .fail(function() {
-    
+    alert('error');
   });
   }
 };
