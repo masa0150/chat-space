@@ -3,7 +3,7 @@
   float: left;
   &__header{
     height: 100px;
-    width: 69vw;
+    width: 72vw;
     position: fixed;
     padding: 0 40px;
     display: flex;
@@ -40,7 +40,7 @@
   }
   &__list{
     height: calc(100vh - 90px);
-    padding: 46px 40px;
+    padding: 109px 40px 40px 40px;
     background-color: #fafafa;
     overflow: scroll;
     &__text{
