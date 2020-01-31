@@ -69,9 +69,9 @@ $.ajax({
 })
  .done(function(data){
    var html = buildHTML(data);
-   $('.messages').append(html);
-   $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});   
-   $('form')[0].reset();
+   $('.main-chat__list__text').append(html);
+   $('.main-chat__list').animate({ scrollTop: $('.main-chat__list')[0].scrollHeight});   
+   $('message')[0].reset();
  })
   .fail(function(){
     alert('error');
@@ -114,6 +114,7 @@ var reloadMessages = function() {
   });
   }
 };
-setInterval(reloadMessages, 7000);
+$('.main-chat__list').animate({ scrollTop: $('.main-chat__list')[0].scrollHeight});
+setInterval(reloadMessages, 5000);
 });
 
