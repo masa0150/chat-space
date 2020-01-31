@@ -52,4 +52,17 @@
     font-size: 12px;
     color: white;
     }
-}  
+}
+.notification {
+  .notice {
+    background-color:lightblue;
+    color: white;
+    text-align: center;
+  }
+
+  .alert {
+    background-color:orange;
+    color: white;
+    text-align: center;
+  }
+}
