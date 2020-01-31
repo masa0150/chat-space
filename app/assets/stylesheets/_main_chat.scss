@@ -3,7 +3,7 @@
   float: left;
   &__header{
     height: 100px;
-    width: 72vw;
+    width: calc(90% - 150px);
     position: fixed;
     padding: 0 40px;
     display: flex;
@@ -62,11 +62,11 @@
     width: inherit;
     display: flex;
     .form__message{
-      width: 49vw;
+      width: 68vw;
       height: 55px;
     }
     .new_message{
-      height: 60px;
+      width: 100%;
       display: flex;
       position: relative;
       &__input-box{
