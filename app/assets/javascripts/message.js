@@ -55,7 +55,8 @@ $(function () {
     return html;
   };
 
-$('.js-form').on('submit', function(e){
+$('.new_message').on('submit', function(e){
+  console.log("aaa")
 e.preventDefault();
 var formData = new FormData(this);
 var url = $(this).attr('action')
@@ -71,13 +72,14 @@ $.ajax({
    var html = buildHTML(data);
    $('.main-chat__list__text').append(html);
    $('.main-chat__list').animate({ scrollTop: $('.main-chat__list')[0].scrollHeight});   
-   $('message')[0].reset();
+   $('.new_message')[0].reset();
  })
   .fail(function(){
     alert('error');
   });
   return false;
 })
+
 var reloadMessages = function() {
   //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
   last_message_id = $('.message:last').data("message-id");
@@ -103,7 +105,7 @@ var reloadMessages = function() {
       insertHTML += buildHTML(message)
     });
     //メッセージが入ったHTMLに、入れ物ごと追加
-    $('.main-chat__list__text').append(insertHTML);
+    $('.main-chat__list').append(insertHTML);
     $('.main-chat__list').animate({ scrollTop: $('.main-chat__list')[0].scrollHeight});
     $("#new_message")[0].reset();
     $(".form__submit").prop("disabled", false);
@@ -114,7 +116,7 @@ var reloadMessages = function() {
   });
   }
 };
-$('.main-chat__list').animate({ scrollTop: $('.main-chat__list')[0].scrollHeight});
+
 setInterval(reloadMessages, 5000);
 });
 
