@@ -56,7 +56,6 @@ $(function () {
   };
 
 $('.new_message').on('submit', function(e){
-  console.log("aaa")
 e.preventDefault();
 var formData = new FormData(this);
 var url = $(this).attr('action')
@@ -93,7 +92,7 @@ var reloadMessages = function() {
     type: 'get',
     dataType: 'json',
     //dataオプションでリクエストに値を含める
-    data: {id: last_message_id}
+    data: {id: last_message_id}z
   })
   .done(function(messages) {
     
