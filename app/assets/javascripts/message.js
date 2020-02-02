@@ -92,7 +92,7 @@ var reloadMessages = function() {
     type: 'get',
     dataType: 'json',
     //dataオプションでリクエストに値を含める
-    data: {id: last_message_id}z
+    data: {id: last_message_id}
   })
   .done(function(messages) {
     
